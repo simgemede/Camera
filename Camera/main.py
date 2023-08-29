@@ -26,6 +26,10 @@ def exitApp():
 if not os.path.exists("photos"):
     os.makedirs("photos")
 
+def onKeyPress(event):
+    if event.keysym == "Return":
+        takePhoto()
+
 window = tk.Tk()
 window.title("Camera")
 window.geometry("800x550")
@@ -47,5 +51,7 @@ updateFrame()
 
 btn_exit = tk.Button(frame, text="Exit", width=20, command=exitApp)
 btn_exit.pack(pady=10)
+
+window.bind("<KeyPress>", onKeyPress)
 
 window.mainloop()
