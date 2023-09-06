@@ -51,7 +51,7 @@ frame = tk.Frame(window)
 frame.pack()
 
 var_date_time = tk.IntVar()
-chk_date_time = tk.Checkbutton(frame, text="Tarih ve Saat Ekle", variable=var_date_time)
+chk_date_time = tk.Checkbutton(frame, text="Adding a Date and Time", variable=var_date_time)
 chk_date_time.pack(pady=5)
 
 btn_takePhoto = tk.Button(frame, text="Take photo", width=20, command=takePhoto)
